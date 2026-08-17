@@ -31,28 +31,23 @@
       return bytes;
     }
     async function gunzip(bytes) {
-      if (typeof DecompressionStream !== 'undefined') {
-        var ds = new DecompressionStream('gzip');
-        var stream = new Blob([bytes]).stream().pipeThrough(ds);
-        var ab = await new Response(stream).arrayBuffer();
-        return new TextDecoder('utf-8').decode(ab);
-      }
-      throw new Error('Trình duyệt không hỗ trợ giải nén gzip');
+      if (typeof DecompressionStream === 'undefined') throw new Error('Can Chrome/Safari moi');
+      var ds = new DecompressionStream('gzip');
+      var stream = new Blob([bytes]).stream().pipeThrough(ds);
+      var ab = await new Response(stream).arrayBuffer();
+      return new TextDecoder('utf-8').decode(ab);
     }
-    var n = 5;
-    var parts = [];
+    var n = 11, parts = [];
     for (var i = 0; i < n; i++) {
-      var r = await fetch('b64_' + i + '.txt');
-      if (!r.ok) throw new Error('b64_' + i + ' HTTP ' + r.status);
+      var r = await fetch('p' + i + '.txt');
+      if (!r.ok) throw new Error('p' + i + ' ' + r.status);
       parts.push(await r.text());
     }
-    document.getElementById('msg').textContent = 'Đang giải nén…';
-    var html = await gunzip(b64ToBytes(parts.join('').replace(/\s+/g, '')));
-    document.open();
-    document.write(html);
-    document.close();
+    document.getElementById('msg').textContent = 'Dang giai nen…';
+    var html = await gunzip(b64ToBytes(parts.join('').replace(/\s+/g,'')));
+    document.open(); document.write(html); document.close();
   })().catch(function (e) {
-    document.getElementById('msg').innerHTML = 'Lỗi: ' + e + '<br><small>Thử Chrome/Safari mới hơn hoặc tải lại.</small>';
+    document.getElementById('msg').textContent = 'Loi: ' + e;
   });
   </script>
 </body>
