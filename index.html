@@ -39,7 +39,7 @@
       }
       throw new Error('Trình duyệt không hỗ trợ giải nén gzip');
     }
-    var n = 3;
+    var n = 5;
     var parts = [];
     for (var i = 0; i < n; i++) {
       var r = await fetch('b64_' + i + '.txt');
@@ -47,8 +47,7 @@
       parts.push(await r.text());
     }
     document.getElementById('msg').textContent = 'Đang giải nén…';
-    var bytes = b64ToBytes(parts.join('').replace(/\s+/g, ''));
-    var html = await gunzip(bytes);
+    var html = await gunzip(b64ToBytes(parts.join('').replace(/\s+/g, '')));
     document.open();
     document.write(html);
     document.close();
