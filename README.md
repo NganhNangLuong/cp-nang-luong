@@ -1,6 +1,6 @@
 # CP Năng Lượng
 
-Web cổ phiếu ngành Năng lượng Việt Nam.
+Web cổ phiếu ngành Năng lượng Việt Nam · **Holy Grail Update 17/08/2026 16:30**
 
 ## Link (sau khi bật Pages)
 https://nganhnangluong.github.io/cp-nang-luong/
@@ -13,10 +13,14 @@ https://nganhnangluong.github.io/cp-nang-luong/
 2. Source → **Deploy from a branch**
 3. Branch **main** · folder **/ (root)** → Save
 
-## Upload payload còn thiếu
-Cần thêm: `b64_0.txt` `b64_1.txt` `b64_2.txt` `b64_3.txt` (đè file `b64_1.txt` cũ nếu có).
+## Cập nhật bản mới (Holy Grail)
+File `app.b64` cần được cập nhật bằng bản gzip+base64 của HTML mới.
 
-Upload: https://github.com/NganhNangLuong/cp-nang-luong/upload/main
+- File nguồn: `VN-Energy-Cards-HOLY-GRAIL-updated-2026-08-17.html`
+- Marker: VN-ENERGY-CARDS-HOLY-GRAIL-UPDATE-2026-08-17
+- Nội dung: BCTC Q2/H1 2026, tin EVN 7 tháng, QHĐ VIII, khung giá điện khí, BESS...
+
+Nếu app.b64 bị placeholder, hãy upload lại file `app.b64` từ artifacts.
 
 ## Ghim màn hình chính
 - iPhone Safari → Share → Thêm vào Màn hình chính
