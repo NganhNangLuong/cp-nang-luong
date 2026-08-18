@@ -11,20 +11,20 @@
   "lang": "vi",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-512.png",
+      "src": "Grok Image 2026-08-18 at 18.25.58.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-192.png",
+      "src": "Grok Image 2026-08-18 at 18.25.58.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "Grok Image 2026-08-18 at 18.25.58.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
