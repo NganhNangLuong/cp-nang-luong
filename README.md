@@ -1,6 +1,6 @@
 # CP Năng Lượng
 
-Web cổ phiếu ngành Năng lượng Việt Nam · **Holy Grail Update 17/08/2026**
+Web cổ phiếu ngành Năng lượng Việt Nam · **v4.5 – 18/08/2026**
 
 ## Link (GitHub Pages)
 https://nganhnangluong.github.io/cp-nang-luong/
@@ -10,35 +10,30 @@ https://nganhnangluong.github.io/cp-nang-luong/
 
 ## Wallpaper / Ảnh nền điện thoại
 
-Ảnh blackhole cầu vồng siêu đẹp (phù hợp màn hình điện thoại dọc):
+Ảnh blackhole cầu vồng (phù hợp màn hình điện thoại dọc):
 
-- **Tải ảnh full HD**: [blackhole-wallpaper.jpg](https://nganhnangluong.github.io/cp-nang-luong/blackhole-wallpaper.jpg)  
-  (Sau khi bạn upload file này lên repo thì link sẽ hoạt động)
+- **Tải ảnh full HD**: [blackhole-wallpaper.jpg](https://nganhnangluong.github.io/cp-nang-luong/blackhole-wallpaper.jpg)
 
 **Cách đặt làm hình nền:**
-1. Mở link ảnh trên điện thoại → nhấn giữ → **Lưu ảnh** / Download
+1. Mở link ảnh trên điện thoại → nhấn giữ → **Lưu ảnh**
 2. Vào Cài đặt → Hình nền / Wallpaper → Chọn ảnh vừa tải
 
-> **Lưu ý về cập nhật tự động**: Hình nền hệ thống (iOS/Android) **không tự cập nhật**. Khi có phiên bản ảnh mới, bạn chỉ cần tải lại và đặt lại hình nền.  
-> App PWA thì sẽ tự tải phiên bản mới khi bạn mở lại (nhờ cache-buster trong index.html).
+> **Lưu ý**: Hình nền hệ thống (iOS/Android) **không tự cập nhật**. Khi có ảnh mới chỉ cần tải lại và đặt lại.  
+> App PWA sẽ tự tải phiên bản mới nhờ cache-buster.
 
-## Cấu trúc hiện tại
-- `index.html` – loader (tải + giải nén `app.b64 2.new`)
-- `app.b64 2.new` – payload HTML đầy đủ (gzip + base64)
+## Cấu trúc hiện tại (sạch)
+- `index.html` – loader (tải + giải nén app.b64.new)
+- `app.b64.new` – payload HTML đầy đủ (gzip + base64)
 - `manifest.json` + `icon.svg` – PWA
-- `blackhole-wallpaper.jpg` – ảnh nền (cần upload)
+- `blackhole-wallpaper.jpg` – ảnh nền
 - `README.md`
 
-## Bật GitHub Pages (nếu chưa)
-1. https://github.com/NganhNangLuong/cp-nang-luong/settings/pages
-2. Source → **Deploy from a branch**
-3. Branch **main** · folder **/ (root)** → Save
-
-## Ghim màn hình chính (Add to Home Screen)
+## Ghim màn hình chính
 - iPhone Safari → Share → Thêm vào Màn hình chính
 - Android Chrome → Cài đặt ứng dụng / Thêm vào màn hình chính
 
 ## Cách cập nhật app khi có bản mới
-1. Upload file HTML mới + cập nhật `app.b64 2.new` (nếu cần)
-2. Sửa dòng cache-buster trong `index.html` (ví dụ `?v=20260818` → `?v=20260819`)
-3. Commit & push → người dùng mở app sẽ tự lấy bản mới (không cần xóa app)
+1. Tạo file `app.b64.new` mới (gzip HTML rồi base64)
+2. Upload đè lên `app.b64.new`
+3. Sửa cache-buster trong `index.html` (ví dụ `?v=20260818-1807` → `?v=20260819`)
+4. Commit → người dùng mở lại app sẽ tự lấy bản mới (không cần xóa app)
