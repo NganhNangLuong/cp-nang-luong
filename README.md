@@ -9,8 +9,8 @@ https://nganhnangluong.github.io/cp-nang-luong/
 **CP Năng Lượng**
 
 ## Cấu trúc hiện tại (đã dọn sạch)
-- `index.html` – loader (tải + giải nén `app.b64.new`)
-- `app.b64.new` – payload HTML đầy đủ (gzip + base64)
+- `index.html` – loader (tải + giải nén `app.b64 2.new`)
+- `app.b64 2.new` – payload HTML đầy đủ (gzip + base64)
 - `manifest.json` + `icon.svg` – PWA
 - `README.md`
 
