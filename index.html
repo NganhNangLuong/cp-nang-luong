@@ -39,7 +39,7 @@
     }
     document.getElementById('msg').textContent = 'Đang tải…';
     // cache-buster để tránh cache cũ
-    var r = await fetch('app.b64.new?v=20260817');
+    var r = await fetch('app.b64.new?v=20260818');
     if (!r.ok) throw new Error('app.b64.new HTTP ' + r.status);
     var b64 = (await r.text()).replace(/\s+/g, '');
     document.getElementById('msg').textContent = 'Đang giải nén…';
